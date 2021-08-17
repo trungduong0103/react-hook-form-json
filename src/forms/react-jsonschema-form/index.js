@@ -1,1 +1,1 @@
-export { default } from "./TestRJSF";
+export { default as VanillaTestRJSF } from "./vanilla/VanillaTestRJSF";

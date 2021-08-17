@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 150px;
+}
+
+.formWrapper {
+  width: 100%;
+  padding: 20px 50px;
+  border: solid 0.5px #afafaf;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  width: 50%;
+  div {
+    fieldset {
+      border: none;
+      div {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+        label {
+          font-size: 1.8rem;
+        }
+        input {
+          margin-top: 10px;
+          border-radius: 6px;
+          height: 40px;
+          padding: 5px;
+          font-size: 1rem;
+        }
+        select {
+          margin-top: 10px;
+          border-radius: 6px;
+          height: 40px;
+          padding: 5px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
