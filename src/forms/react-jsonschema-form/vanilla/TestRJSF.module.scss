@@ -8,7 +8,7 @@
 
 .formWrapper {
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 20px;
   border: solid 0.5px #afafaf;
   border-radius: 12px;
   display: flex;
@@ -16,31 +16,37 @@
 }
 
 .form {
-  width: 50%;
+  width: 100%;
   div {
     fieldset {
       border: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 10px 0px;
       div {
-        text-align: left;
         display: flex;
         flex-direction: column;
-        margin: 20px 0px;
+        width: 33.33%;
+        margin-bottom: 20px;
         label {
           font-size: 1.8rem;
+          text-align: left;
         }
         input {
+          border-width: 0.5px;
           margin-top: 10px;
           border-radius: 6px;
-          height: 40px;
           padding: 5px;
           font-size: 1rem;
+          max-width: 80%;
         }
         select {
           margin-top: 10px;
           border-radius: 6px;
-          height: 40px;
           padding: 5px;
           font-size: 1rem;
+          max-width: 80%;
         }
       }
     }

@@ -10,12 +10,7 @@ const TestRJSF = () => (
       <Form
         className={styles.form}
         schema={schema}
-        onSubmit={({ formData }) => alert(JSON.stringify(formData))}
-      />
-      <Form
-        className={styles.form}
-        schema={schema}
-        onSubmit={({ formData }) => alert(JSON.stringify(formData))}
+        onSubmit={({ formData }) => console.log(formData)}
       />
     </div>
   </div>

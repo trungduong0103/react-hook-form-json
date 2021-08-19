@@ -1,1 +1,1 @@
-export { default } from "./TestRHF";
+export { default as VanillaTestRHF } from "./vanilla/TestRHF";

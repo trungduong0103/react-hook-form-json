@@ -1,0 +1,29 @@
+.app {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnWrapper {
+  position: absolute;
+  top: 50%;
+  width: 500px;
+}
+
+.btn {
+  display: inline-block;
+  width: 150px;
+  padding: 15px;
+  border-radius: 16px;
+  background-color: #ffd167;
+  border: solid 0.5px #fff;
+  @extend .noUnderline;
+  font-weight: 600;
+}
+
+.noUnderline {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
