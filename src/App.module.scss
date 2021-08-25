@@ -7,13 +7,11 @@
 
 .btnWrapper {
   position: absolute;
-  top: 50%;
-  width: 500px;
+  top: 40%;
 }
 
 .btn {
   display: inline-block;
-  width: 150px;
   padding: 15px;
   border-radius: 16px;
   background-color: #ffd167;
@@ -25,5 +23,5 @@
 .noUnderline {
   text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }

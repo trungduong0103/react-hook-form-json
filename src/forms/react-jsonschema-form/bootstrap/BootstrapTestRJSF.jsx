@@ -1,11 +1,11 @@
 import React from "react";
-import Form from "@rjsf/core";
+import Form from "@rjsf/bootstrap-4";
 import { schema } from "../schema/schema";
 import styles from "../TestRJSF.module.scss";
 
-const TestRJSF = () => (
+const BootstrapTestRJSF = () => (
   <div className={styles.wrapper}>
-    <h1>Vanilla React JSON Schema Form</h1>
+    <h1>Bootstrap React JSON Schema Form</h1>
     <div className={styles.formWrapper}>
       <Form
         className={styles.form}
@@ -16,4 +16,4 @@ const TestRJSF = () => (
   </div>
 );
 
-export default TestRJSF;
+export default BootstrapTestRJSF;

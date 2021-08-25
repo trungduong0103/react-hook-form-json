@@ -1,0 +1,44 @@
+.form {
+  padding: 50px 150px;
+}
+
+.bordered {
+  border: solid 1px #afafaf;
+  border-radius: 12px;
+  padding: 20px 20px;
+}
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inputRow {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  margin-bottom: 30px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+}
+
+.label {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.input {
+  margin-top: 10px;
+  border-radius: 6px;
+  border-width: 0.5px;
+  padding: 5px;
+  font-size: 1rem;
+  max-width: 80%;
+}

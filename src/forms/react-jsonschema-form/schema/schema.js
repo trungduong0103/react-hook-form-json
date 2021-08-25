@@ -47,13 +47,20 @@ const generateMixes = () => {
       maxLength: 10,
       pattern: "^[a-zA-Z ]+$",
       title: `Textfield #${currentIndex + 1}`,
-      default: "Big Yoshi",
+      default: "Big Big Yoshi",
     };
     acc[`Select #${currentIndex + 1}`] = {
       type: "string",
       title: `Select #${currentIndex + 1}`,
-      enum: ["Big Yoshi", "Tiny Yoshi"],
-      default: "Big Yoshi",
+      enum: [
+        "Very Small Yoshi",
+        "Small Yoshi",
+        "Medium Yoshi",
+        "Regular Yoshi",
+        "Big Yoshi",
+        "Very Big Yoshi",
+      ],
+      default: "Regular Yoshi",
     };
     acc[`Checkbox #${currentIndex + 1}`] = {
       type: "boolean",

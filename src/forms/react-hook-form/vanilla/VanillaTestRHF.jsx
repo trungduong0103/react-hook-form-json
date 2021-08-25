@@ -2,7 +2,16 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import styles from "./VanillaTestRHF.module.scss";
 
-export default function TestRHF() {
+const options = [
+  "Very Small Yoshi",
+  "Small Yoshi",
+  "Medium Yoshi",
+  "Regular Yoshi",
+  "Big Yoshi",
+  "Very Big Yoshi",
+];
+
+export default function VanillaTestRHF() {
   const {
     register,
     formState: { errors },
@@ -19,14 +28,19 @@ export default function TestRHF() {
               TextField #{currentIndex + 1}
             </label>
             <input
-              defaultValue="Hello"
+              defaultValue="Big Big Yoshi"
               className={styles.input}
               {...register(`myFormData.textField_${currentIndex + 1}`, {
                 required: "This field is required!",
+                validate: {
+                  isBigEnough: (value) => value.length > 10,
+                },
               })}
             />
             {errors?.myFormData?.[`textField_${currentIndex + 1}`] && (
-              <span style={{ color: "red" }}>Text field has error</span>
+              <span style={{ color: "red" }}>
+                Must not be empty and has more than 10 characters!
+              </span>
             )}
           </div>
 
@@ -36,16 +50,18 @@ export default function TestRHF() {
               className={styles.input}
               {...register(`myFormData.select_${currentIndex + 1}`, {
                 validate: {
-                  notOther: (v) => v !== "Other",
+                  notOther: (v) => v !== "Medium Yoshi",
                 },
               })}
             >
-              <option value="True">True</option>
-              <option value="False">False</option>
-              <option value="Other">Other</option>
+              {options.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
             </select>
             {errors?.myFormData?.[`select_${currentIndex + 1}`] && (
-              <span style={{ color: "red" }}>You cannot select Other!</span>
+              <span style={{ color: "red" }}>You cannot Medium Yoshi!</span>
             )}
           </div>
 

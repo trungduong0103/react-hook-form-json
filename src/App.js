@@ -1,25 +1,27 @@
 import styles from "./App.module.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { VanillaTestRJSF } from "./forms/react-jsonschema-form";
-import { VanillaTestRHF } from "./forms/react-hook-form";
+import {
+  VanillaTestRJSF,
+  MaterialUITestRJSF,
+} from "./forms/react-jsonschema-form";
+import { VanillaTestRHF, MaterialUITestRHF } from "./forms/react-hook-form";
 
 const LinkButtons = () => {
   return (
     <div className={styles.btnWrapper}>
-      <Link
-        style={{ marginRight: "10px" }}
-        className={styles.btn}
-        to="/test-rjsf"
-      >
+      <Link className={styles.btn} to="/test-vanilla-rjsf">
         Test RJSF
       </Link>
 
-      <Link
-        style={{ marginLeft: "10px" }}
-        className={styles.btn}
-        to="/test-rhf"
-      >
+      <Link className={styles.btn} to="/test-material-ui-rjsf">
+        Test Material UI RJSF
+      </Link>
+
+      <Link className={styles.btn} to="/test-vanilla-rhf">
         Test RHF
+      </Link>
+      <Link className={styles.btn} to="/test-material-ui-rhf">
+        Test Material UI RHF
       </Link>
     </div>
   );
@@ -31,8 +33,19 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={LinkButtons} />
-          <Route path="/test-rjsf" exact component={VanillaTestRJSF} />
-          <Route path="/test-rhf" exact component={VanillaTestRHF} />
+          <Route path="/test-vanilla-rjsf" exact component={VanillaTestRJSF} />
+          <Route
+            path="/test-material-ui-rjsf"
+            exact
+            component={MaterialUITestRJSF}
+          />
+
+          <Route path="/test-vanilla-rhf" exact component={VanillaTestRHF} />
+          <Route
+            path="/test-material-ui-rhf"
+            exact
+            component={MaterialUITestRHF}
+          />
         </Switch>
       </Router>
     </div>
