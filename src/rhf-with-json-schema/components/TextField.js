@@ -1,7 +1,7 @@
 import { useFormContext } from "react-hook-form";
 import { TextField, Typography } from "@material-ui/core";
 
-export function RHFTextField({ fieldName, ...properties }) {
+export default function RHFTextField({ fieldName, ...properties }) {
   const { label, fullWidth, placeholder } = properties;
   const { register } = useFormContext();
 

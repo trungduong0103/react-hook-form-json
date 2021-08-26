@@ -15,6 +15,24 @@ const schema = {
     fullWidth: true,
     isRequired: true,
   },
+  isYoshi: {
+    type: "checkbox",
+    label: "Check if you are actually Yoshi in disguise",
+  },
+  isYoshiConfirm: {
+    type: "radio",
+    label: "Are you sure ?",
+    options: [
+      {
+        key: 1,
+        value: "Yeah",
+      },
+      {
+        key: 2,
+        value: "Nah",
+      },
+    ],
+  },
 };
 
 const Demo = () => {
