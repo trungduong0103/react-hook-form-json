@@ -1,6 +1,7 @@
 import { useFormContext } from "react-hook-form";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 
+// TODO: fix this
 export default function RHFCheckbox({ fieldName, ...properties }) {
   const { label } = properties;
   const { register } = useFormContext();

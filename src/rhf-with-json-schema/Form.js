@@ -9,7 +9,7 @@ const Form = ({ title, schema, handleSubmit, formOptions, buttons }) => {
     <Box component="div" className={styles.formWrapper}>
       <FormProvider {...form}>
         <Typography variant="h3" component="h3">
-          Hello {title}!
+          {title}!
         </Typography>
         <form onSubmit={form.handleSubmit(handleSubmit)}>
           {Object.entries(schema).map(([key, value]) => (
