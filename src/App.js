@@ -5,6 +5,7 @@ import {
   MaterialUITestRJSF,
 } from "./forms/react-jsonschema-form";
 import { VanillaTestRHF, MaterialUITestRHF } from "./forms/react-hook-form";
+import Demo from './rhf-with-json-schema/Demo';
 
 const LinkButtons = () => {
   return (
@@ -46,6 +47,8 @@ function App() {
             exact
             component={MaterialUITestRHF}
           />
+
+          <Route path="/demo-schema" exact component={Demo} />
         </Switch>
       </Router>
     </div>
