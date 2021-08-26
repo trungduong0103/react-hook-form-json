@@ -9,14 +9,12 @@ import {
 
 export default function RHFRadio({ fieldName, ...properties }) {
   const { label, options } = properties;
-  console.log(options);
 
   return (
     <Controller
       name={fieldName}
       control={useFormContext().control}
       render={({ field: { onChange, value: fieldValue } }) => {
-        console.log(fieldValue);
         return (
           <FormControl>
             <FormLabel>{label}</FormLabel>
